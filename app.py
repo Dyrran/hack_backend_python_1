@@ -27,11 +27,12 @@ def userdel():
         "payload": "success"
     })
 
-# H-4 ERROR
+# H-4
 @app.route("/user", methods=["PUT"])
 def useredit():
     return jsonify({
-        "payload": "success"
+        "payload": "success",
+        "error": False
     })
 
 # H-5
@@ -41,12 +42,12 @@ def userget():
         "payload": []
     })
 
-# H-6 FAILED
+# H-6 "Falla de mi lado"
 @app.route("/api/v1/user", methods=["POST"])
-def user_addargs():
-    email = request.args.get('email')
-    name = request.args.get('name')
-    
+def user_post_en():
+    email = request.args.get("email")
+    name = request.args.get("name")
+
     return jsonify({
         "payload": {
             "email": email,
