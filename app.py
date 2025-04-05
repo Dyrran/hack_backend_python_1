@@ -42,7 +42,7 @@ def userget():
         "payload": []
     })
 
-# H-6 "Falla de mi lado"
+# H-6 (Falla de mi lado con el test_server.py, pero no con el Thunder Client)
 @app.route("/api/v1/user", methods=["POST"])
 def user_post_en():
     email = request.args.get("email")
