@@ -42,7 +42,7 @@ def userget():
         "payload": []
     })
 
-# H-6 (Falla de mi lado con el test_server.py, pero no con el Thunder Client)
+# H-6
 @app.route("/api/v1/user", methods=["POST"])
 def user_post_en():
     email = request.args.get("email")
